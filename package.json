@@ -1,0 +1,50 @@
+{
+	"name": "catright-syncscrollspliteditor",
+	"displayName": "SyncScrollSplitEditor",
+	"description": "Sync scroll all splited editors to active editor which is currently seleted one to edit",
+	"version": "0.0.1",
+	"publisher": "catright",
+	"repository": "https://github.com/catright/syncscrollspliteditor",
+	"engines": {
+		"vscode": "^1.34.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.aTEinfo",
+				"title": "Get aTE info",
+				"category": "SSE",
+				"description":"Show info about active text editor in info-message for debug."
+			},
+			{
+				"command": "extension.syncViews",
+				"title": "Sync Split Editor",
+				"category": "SSE"
+			},
+			{
+				"command": "extension.stopSyncViews",
+				"title": "Stop Sync Split Editor",
+				"category": "SSE"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "tslint -p ./",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^10.14.17",
+		"@types/vscode": "^1.34.0",
+		"tslint": "^5.16.0",
+		"typescript": "^3.5.1"
+	}
+}
